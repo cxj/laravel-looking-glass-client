@@ -62,7 +62,7 @@
               "LookingGlassServiceProvider"
             ],
             "aliases": {
-                "LaravelLookingGlassClient": "Cxj\\LaravelLookingGlassClient\\Facades\\LaravelLookingGlassClient"
+                "LaravelLookingGlassClient": "LookingGlass"
             }
         }
     },

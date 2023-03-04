@@ -1,6 +1,6 @@
 <?php
 
-// config for Cxj/LaravelLookingGlassClient
+// config for Cxj/LookingGlass
 return [
 
 ];

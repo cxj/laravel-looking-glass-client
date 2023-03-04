@@ -4,7 +4,7 @@ namespace Cxj\LaravelLookingGlassClient;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Cxj\LaravelLookingGlassClient\Commands\LaravelLookingGlassClientCommand;
+use Cxj\LaravelLookingGlassClient\Commands\LookingGlassCommand;
 
 class LookingGlassServiceProvider extends PackageServiceProvider
 {
