@@ -47,7 +47,7 @@ php artisan vendor:publish --tag="laravel-looking-glass-client-views"
 ## Usage
 
 ```php
-$laravelLookingGlassClient = new Cxj\LaravelLookingGlassClient();
+$laravelLookingGlassClient = new Cxj\LookingGlass();
 echo $laravelLookingGlassClient->echoPhrase('Hello, Cxj!'); // Todo: TBD
 ```
 

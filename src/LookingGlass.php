@@ -1,6 +1,6 @@
 <?php
 
-namespace Cxj\LaravelLookingGlassClient;
+namespace Cxj\LookingGlass;
 
 class LookingGlass
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Cxj\LaravelLookingGlassClient\Commands;
+namespace Cxj\LookingGlass\Commands;
 
 use Illuminate\Console\Command;
 

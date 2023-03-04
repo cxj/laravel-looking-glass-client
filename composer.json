@@ -33,13 +33,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Cxj\\LaravelLookingGlassClient\\": "src",
-            "Cxj\\LaravelLookingGlassClient\\Database\\Factories\\": "database/factories"
+            "Cxj\\LookingGlass\\": "src",
+            "Cxj\\LookingGlass\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Cxj\\LaravelLookingGlassClient\\Tests\\": "tests"
+            "Cxj\\LookingGlass\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -62,7 +62,7 @@
               "LookingGlassServiceProvider"
             ],
             "aliases": {
-                "LaravelLookingGlassClient": "LookingGlass"
+                "LookingGlass": "LookingGlass"
             }
         }
     },

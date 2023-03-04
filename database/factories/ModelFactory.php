@@ -1,6 +1,6 @@
 <?php
 
-namespace Cxj\LaravelLookingGlassClient\Database\Factories;
+namespace Cxj\LookingGlass\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

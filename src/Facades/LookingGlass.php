@@ -1,16 +1,16 @@
 <?php
 
-namespace Cxj\LaravelLookingGlassClient\Facades;
+namespace Cxj\LookingGlass\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Cxj\LaravelLookingGlassClient\LookingGlass
+ * @see \Cxj\LookingGlass\LookingGlass
  */
 class LookingGlass extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \Cxj\LaravelLookingGlassClient\LookingGlass::class;
+        return \Cxj\LookingGlass\LookingGlass::class;
     }
 }

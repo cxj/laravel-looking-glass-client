@@ -1,10 +1,10 @@
 <?php
 
-namespace Cxj\LaravelLookingGlassClient\Tests;
+namespace Cxj\LookingGlass\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Cxj\LaravelLookingGlassClient\LookingGlassServiceProvider;
+use Cxj\LookingGlass\LookingGlassServiceProvider;
 
 class TestCase extends Orchestra
 {

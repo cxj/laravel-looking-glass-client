@@ -1,10 +1,10 @@
 <?php
 
-namespace Cxj\LaravelLookingGlassClient;
+namespace Cxj\LookingGlass;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Cxj\LaravelLookingGlassClient\Commands\LookingGlassCommand;
+use Cxj\LookingGlass\Commands\LookingGlassCommand;
 
 class LookingGlassServiceProvider extends PackageServiceProvider
 {
