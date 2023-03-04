@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "cxj/laravel-looking-glass-client",
+    "description": "Easy to use Laravel client for the Looking Glass monitoring application.",
     "keywords": [
-        ":vendor_name",
+        "cxj",
         "laravel",
-        ":package_slug"
+        "laravel-looking-glass-client"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/cxj/laravel-looking-glass-client",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Chris Johnson",
+            "email": "cxj@users.noreply.github.com",
             "role": "Developer"
         }
     ],
@@ -21,7 +21,6 @@
         "illuminate/contracts": "^10.0"
     },
     "require-dev": {
-        "laravel/pint": "^1.0",
         "nunomaduro/collision": "^7.9",
         "nunomaduro/larastan": "^2.0.1",
         "orchestra/testbench": "^8.0",
@@ -30,18 +29,17 @@
         "pestphp/pest-plugin-laravel": "^2.0",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "spatie/laravel-ray": "^1.26"
+        "phpstan/phpstan-phpunit": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Cxj\\LaravelLookingGlassClient\\": "src",
+            "Cxj\\LaravelLookingGlassClient\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Cxj\\LaravelLookingGlassClient\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -61,10 +59,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Cxj\\LaravelLookingGlassClient\\LaravelLookingGlassClientServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelLookingGlassClient": "Cxj\\LaravelLookingGlassClient\\Facades\\LaravelLookingGlassClient"
             }
         }
     },
