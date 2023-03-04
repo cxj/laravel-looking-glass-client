@@ -59,7 +59,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Cxj\\LaravelLookingGlassClient\\LaravelLookingGlassClientServiceProvider"
+              "LookingGlassServiceProvider"
             ],
             "aliases": {
                 "LaravelLookingGlassClient": "Cxj\\LaravelLookingGlassClient\\Facades\\LaravelLookingGlassClient"
