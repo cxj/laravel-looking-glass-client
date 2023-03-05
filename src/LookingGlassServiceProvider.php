@@ -2,9 +2,12 @@
 
 namespace Cxj\LookingGlass;
 
+use Illuminate\Foundation\AliasLoader;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Cxj\LookingGlass\Commands\LookingGlassCommand;
+use Spatie\WebhookServer\WebhookCall;
+use Spatie\WebhookServer\WebhookServerServiceProvider;
 
 class LookingGlassServiceProvider extends PackageServiceProvider
 {
@@ -19,5 +22,12 @@ class LookingGlassServiceProvider extends PackageServiceProvider
             ->name('laravel-looking-glass-client')
             ->hasConfigFile()
             ->hasCommand(LookingGlassCommand::class);
+    }
+
+    public function boot(): void
+    {
+        $this->app->register(WebhookServerServiceProvider::class);
+        $loader = AliasLoader::getInstance();
+        $loader->alias('WebhookCall', WebhookCall::class);
     }
 }
