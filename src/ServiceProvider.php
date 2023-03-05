@@ -50,7 +50,10 @@ class ServiceProvider extends PackageServiceProvider
         // Register commands.
         AboutCommand::add(
             'Looking Glass Client',
-            fn() => ['Version' => self::VERSION, 'foo' => 'bar']
+            fn() => [
+                'Version' => self::VERSION,
+                'Repo'    => 'https://github.com/cxj/laravel-looking-glass-client'
+            ]
         );
 
         // Make dependency package(s) available.
