@@ -18,7 +18,7 @@ class LookingGlassCommand extends Command
 
         LookingGlass::transmit($result);
 
-        $this->comment('All done');
+        $this->comment('Message queued for webhook job');
 
         return self::SUCCESS;
     }
