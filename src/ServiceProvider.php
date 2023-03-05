@@ -9,7 +9,7 @@ use Cxj\LookingGlass\Commands\LookingGlassCommand;
 use Spatie\WebhookServer\WebhookCall;
 use Spatie\WebhookServer\WebhookServerServiceProvider;
 
-class LookingGlassServiceProvider extends PackageServiceProvider
+class ServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {

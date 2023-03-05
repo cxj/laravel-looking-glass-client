@@ -4,7 +4,7 @@ namespace Cxj\LookingGlass\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Cxj\LookingGlass\LookingGlassServiceProvider;
+use Cxj\LookingGlass\ServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -20,7 +20,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            LookingGlassServiceProvider::class,
+            ServiceProvider::class,
         ];
     }
 
