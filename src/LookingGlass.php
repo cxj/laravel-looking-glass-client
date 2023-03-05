@@ -9,7 +9,7 @@ class LookingGlass
     public function handle(Result $result): void
     {
         // Send this status to Looking Glass.
-        WebhookCall::create()
+        WebhookCall::send()
                    ->url(config('looking-glass.url'))
                    ->payload(
                        [
