@@ -16,7 +16,7 @@ class LookingGlassCommand extends Command
     {
         $result = Result::make('Test message from CLI');
 
-        LookingGlass::send($result);
+        LookingGlass::transmit($result);
 
         $this->comment('All done');
 

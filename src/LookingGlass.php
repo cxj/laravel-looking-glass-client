@@ -6,7 +6,7 @@ use Spatie\WebhookServer\WebhookCall;
 
 class LookingGlass
 {
-    public function handle(Result $result): void
+    public function transmit(Result $result): void
     {
         // Send this status to Looking Glass.
         WebhookCall::send()
