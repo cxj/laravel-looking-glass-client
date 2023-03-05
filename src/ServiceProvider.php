@@ -19,7 +19,8 @@ class ServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('laravel-looking-glass-client')
+            // ->name('laravel-looking-glass-client')
+            ->name('laravel-looking-glass')
             ->hasConfigFile()
             ->hasCommand(LookingGlassCommand::class);
     }
