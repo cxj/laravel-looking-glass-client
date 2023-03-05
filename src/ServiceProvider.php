@@ -23,7 +23,7 @@ class ServiceProvider extends PackageServiceProvider
         $package
              ->name('laravel-looking-glass-client')
 //            ->name('laravel-looking-glass')
-            ->hasConfigFile('looking-glass.php')
+            ->hasConfigFile('looking-glass')
             ->hasCommand(LookingGlassCommand::class)
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
@@ -37,38 +37,38 @@ class ServiceProvider extends PackageServiceProvider
             });
     }
 
-    public function register()
-    {
-        $this->app->bind('LookingGlass', function ($app) {
-            return new LookingGlass();
-        });
-    }
+//    public function register()
+//    {
+//        $this->app->bind('LookingGlass', function ($app) {
+//            return new LookingGlass();
+//        });
+//    }
 
 
-    public function boot(): void
-    {
-        // Publish config file.
-//        $this->publishes([
-//            __DIR__ . '/../config/looking-glass.php' => config_path(
-//                'looking-glass.php'
-//            ),
-//        ]);
-
-        // Register commands.
-        AboutCommand::add(
-            'Looking Glass Client',
-            fn() => ['Version' => '0.0.1']
-        );
-
-//        if ($this->app->runningInConsole()) {
-//            $this->commands([
-//                LookingGlassCommand::class,
-//            ]);
-//        }
-
-        // Make dependecy package(s) available.
-        $this->app->register(WebhookServerServiceProvider::class);
-        $loader = AliasLoader::getInstance();
-        $loader->alias('WebhookCall', WebhookCall::class);
-    }
+//    public function boot(): void
+//    {
+//        // Publish config file.
+////        $this->publishes([
+////            __DIR__ . '/../config/looking-glass.php' => config_path(
+////                'looking-glass.php'
+////            ),
+////        ]);
+//
+//        // Register commands.
+//        AboutCommand::add(
+//            'Looking Glass Client',
+//            fn() => ['Version' => '0.0.1']
+//        );
+//
+////        if ($this->app->runningInConsole()) {
+////            $this->commands([
+////                LookingGlassCommand::class,
+////            ]);
+////        }
+//
+//        // Make dependecy package(s) available.
+//        $this->app->register(WebhookServerServiceProvider::class);
+//        $loader = AliasLoader::getInstance();
+//        $loader->alias('WebhookCall', WebhookCall::class);
+//    }
 }
