@@ -56,10 +56,10 @@
     "extra": {
         "laravel": {
             "providers": [
-              "LookingGlassServiceProvider"
+                "Cxj\\LookingGlass\\ServiceProvider"
             ],
             "aliases": {
-                "LookingGlass": "LookingGlass"
+                "LookingGlass": "Cxj\\LookingGlass\\Facade"
             }
         }
     },
