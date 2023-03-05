@@ -59,7 +59,7 @@
                 "Cxj\\LookingGlass\\ServiceProvider"
             ],
             "aliases": {
-                "LookingGlass": "Cxj\\LookingGlass\\Facade"
+                "LookingGlass": "Cxj\\LookingGlass\\Facades\\LookingGlass"
             }
         }
     },

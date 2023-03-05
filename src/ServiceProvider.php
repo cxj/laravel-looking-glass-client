@@ -75,7 +75,7 @@ class ServiceProvider extends PackageServiceProvider
 //            ]);
 //        }
 
-        // Make dependecy package(s) available.
+        // Make dependency package(s) available.
         $this->app->register(WebhookServerServiceProvider::class);
         $loader = AliasLoader::getInstance();
         $loader->alias('WebhookCall', WebhookCall::class);
