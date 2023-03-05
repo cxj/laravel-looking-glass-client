@@ -26,6 +26,12 @@ class ServiceProvider extends PackageServiceProvider
 
     public function boot(): void
     {
+        $this->publishes([
+            __DIR__ . '/../config/looking-glass.php' => config_path(
+                'looking-glass.php'
+            ),
+        ]);
+
         $this->app->register(WebhookServerServiceProvider::class);
         $loader = AliasLoader::getInstance();
         $loader->alias('WebhookCall', WebhookCall::class);
