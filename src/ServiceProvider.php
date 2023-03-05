@@ -14,6 +14,8 @@ use Spatie\WebhookServer\WebhookServerServiceProvider;
 
 class ServiceProvider extends PackageServiceProvider
 {
+    const VERSION = '0.0.2';
+
     public function configurePackage(Package $package): void
     {
         /*
@@ -26,19 +28,7 @@ class ServiceProvider extends PackageServiceProvider
             ->hasConfigFile('looking-glass')
             ->hasCommand(LookingGlassCommand::class)
             ->hasInstallCommand(function (InstallCommand $command) {
-                $command
-                    ->startWith(function (InstallCommand $command) {
-                        $command->info('Imagine this actually working...');
-                    }) // Does not work, Spatie?!
-                    ->publishConfigFile()
-                    ->publishMigrations()
-                    ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub(
-                        'cxj/laravel-looking-glass-client'
-                    ) // Does not work, Spatie?!
-                    ->endWith(function (InstallCommand $command) {
-                        $command->info('Have a great day!');
-                    }); // Does not work, Spatie?!
+                $command->publishConfigFile();
             });
     }
 
@@ -57,24 +47,11 @@ class ServiceProvider extends PackageServiceProvider
 
     public function boot(): void
     {
-        // Publish config file.
-//        $this->publishes([
-//            __DIR__ . '/../config/looking-glass.php' => config_path(
-//                'looking-glass.php'
-//            ),
-//        ]);
-
         // Register commands.
         AboutCommand::add(
             'Looking Glass Client',
-            fn() => ['Version' => '0.0.1']
+            fn() => ['Version' => self::VERSION, 'foo' => 'bar']
         );
-
-//        if ($this->app->runningInConsole()) {
-//            $this->commands([
-//                LookingGlassCommand::class,
-//            ]);
-//        }
 
         // Make dependency package(s) available.
         $this->app->register(WebhookServerServiceProvider::class);

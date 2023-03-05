@@ -2,14 +2,25 @@
 
 namespace Cxj\LookingGlass;
 
+use Illuminate\Foundation\Bus\PendingDispatch;
 use Spatie\WebhookServer\WebhookCall;
 
 class LookingGlass
 {
+    private PendingDispatch $dispatch;
+
+    /**
+     * @return PendingDispatch
+     */
+    public function getDispatch(): PendingDispatch
+    {
+        return $this->dispatch;
+    }
+
     public function transmit(Result $result): self
     {
         // Send this status to Looking Glass.
-        $dispatch = WebhookCall
+        $this->dispatch = WebhookCall
             ::create()
             ->url(config('looking-glass.url'))
             ->payload(
@@ -34,8 +45,6 @@ class LookingGlass
                 config('looking-glass.secret')
             )
             ->dispatch();
-
-        dump($dispatch); // debug
 
         return $this;
     }

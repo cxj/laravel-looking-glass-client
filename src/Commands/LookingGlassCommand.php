@@ -2,7 +2,7 @@
 
 namespace Cxj\LookingGlass\Commands;
 
-use Cxj\LookingGlass\Facades\LookingGlass;
+use Cxj\LookingGlass\LookingGlass;
 use Cxj\LookingGlass\Result;
 use Illuminate\Console\Command;
 
@@ -16,7 +16,9 @@ class LookingGlassCommand extends Command
     {
         $result = Result::make('Test message from CLI');
 
-        LookingGlass::transmit($result);
+        // todo Until we can quiet PHPStan about Facade static call.
+        $glass = new LookingGlass();
+        $glass->transmit($result);
 
         $this->comment('Message queued for webhook job');
 
