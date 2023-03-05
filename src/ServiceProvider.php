@@ -4,6 +4,7 @@ namespace Cxj\LookingGlass;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Foundation\Console\AboutCommand;
+use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Cxj\LookingGlass\Commands\LookingGlassCommand;
@@ -23,12 +24,22 @@ class ServiceProvider extends PackageServiceProvider
             // ->name('laravel-looking-glass-client')
             ->name('laravel-looking-glass')
             ->hasConfigFile('looking-glass.php')
-            ->hasCommand(LookingGlassCommand::class);
+            ->hasCommand(LookingGlassCommand::class)
+            ->hasInstallCommand(function (InstallCommand $command) {
+                $command
+                    ->publishConfigFile()
+                    ->publishMigrations()
+                    ->askToRunMigrations()
+                    ->askToStarRepoOnGitHub('cxj/laravel-looking-glass-client')
+                    ->endWith(function (InstallCommand $command) {
+                        $command->info('Have a great day!');
+                    });
+            });
     }
-
+    
     public function register()
     {
-        $this->app->bind('LookingGlass', function($app) {
+        $this->app->bind('LookingGlass', function ($app) {
             return new LookingGlass();
         });
     }
