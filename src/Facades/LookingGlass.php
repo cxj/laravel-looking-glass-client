@@ -2,11 +2,12 @@
 
 namespace Cxj\LookingGlass\Facades;
 
+use Cxj\LookingGlass\Result;
 use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \Cxj\LookingGlass\LookingGlass
- * @method transmit
+ * @method static transmit(Result $result)
  */
 class LookingGlass extends Facade
 {
