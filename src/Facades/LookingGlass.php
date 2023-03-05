@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \Cxj\LookingGlass\LookingGlass
+ * @method transmit
  */
 class LookingGlass extends Facade
 {

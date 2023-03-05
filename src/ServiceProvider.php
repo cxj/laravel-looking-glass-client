@@ -22,22 +22,23 @@ class ServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-             ->name('laravel-looking-glass-client')
-//            ->name('laravel-looking-glass')
+            ->name('laravel-looking-glass-client')
             ->hasConfigFile('looking-glass')
             ->hasCommand(LookingGlassCommand::class)
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
                     ->startWith(function (InstallCommand $command) {
                         $command->info('Imagine this actually working...');
-                    })
+                    }) // Does not work, Spatie?!
                     ->publishConfigFile()
                     ->publishMigrations()
                     ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub('cxj/laravel-looking-glass-client')
+                    ->askToStarRepoOnGitHub(
+                        'cxj/laravel-looking-glass-client'
+                    ) // Does not work, Spatie?!
                     ->endWith(function (InstallCommand $command) {
                         $command->info('Have a great day!');
-                    });
+                    }); // Does not work, Spatie?!
             });
     }
 
