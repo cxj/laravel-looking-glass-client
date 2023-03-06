@@ -18,7 +18,7 @@ class LookingGlassCommand extends Command
 
         // todo Until we can quiet PHPStan about Facade static call.
         $glass = new LookingGlass();
-        $glass->transmit($result);
+        $glass->transmit('CLI Test', $result, null);
 
         $this->comment('Message queued for webhook job');
 
