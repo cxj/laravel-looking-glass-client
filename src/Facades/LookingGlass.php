@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \Cxj\LookingGlass\LookingGlass
- * @method static transmit(Result $result)
+ * @method static transmit(string $label, Result $result, string $appName))
  */
 class LookingGlass extends Facade
 {
