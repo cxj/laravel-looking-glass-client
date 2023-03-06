@@ -3,7 +3,6 @@
 namespace Cxj\LookingGlass;
 
 use Illuminate\Foundation\Bus\PendingDispatch;
-use Illuminate\Support\Facades\Log;
 use Spatie\WebhookServer\WebhookCall;
 
 class LookingGlass
@@ -24,8 +23,6 @@ class LookingGlass
         string $appName = null
     ): self {
         $name = $appName ?? config('app.name');
-
-        Log::debug('Using URL: ' . config('looking-glass.url')); // debug
 
         // Send this status to Looking Glass.
         $this->dispatch = WebhookCall
