@@ -18,13 +18,6 @@ You can install the package via composer:
 composer require cxj/laravel-looking-glass-client
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="laravel-looking-glass-client-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
@@ -35,20 +28,18 @@ This is the contents of the published config file:
 
 ```php
 return [
+    'url'    => env('LOOKING_GLASS_URL', 'localhost:8000/api/webhook'),
+    'secret' => env('LOOKING_GLASS_SECRET', 'shared-secret'),
 ];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="laravel-looking-glass-client-views"
 ```
 
 ## Usage
 
 ```php
-$laravelLookingGlassClient = new Cxj\LookingGlass();
-echo $laravelLookingGlassClient->echoPhrase('Hello, Cxj!'); // Todo: TBD
+$result = Cxj\Result::make('Test message from your application');
+
+$glass = new Cxj\LookingGlass();
+$glass->transmit('Name of Test or Status', $result);
 ```
 
 ## Testing
