@@ -5,10 +5,9 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/cxj/laravel-looking-glass-client/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/cxj/laravel-looking-glass-client/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/cxj/laravel-looking-glass-client.svg?style=flat-square)](https://packagist.org/packages/cxj/laravel-looking-glass-client)
 
-This is an easy to use Laravel client for the Looking Glass application 
-status and health monitoring web application.  This package makes it easy 
-for any Laravel application to report any status or health data to Looking 
-Glass.
+This is an easy to use Laravel client for the [Looking Glass](https://github.com/cxj/looking-glass)
+application status and health monitoring web application.  This package makes it easy 
+for any Laravel application to report any status or health data to Looking Glass.
 
 ## Installation
 
