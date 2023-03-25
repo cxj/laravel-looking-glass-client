@@ -2,9 +2,9 @@
 
 namespace Cxj\LookingGlass\Tests;
 
+use Cxj\LookingGlass\ServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Cxj\LookingGlass\ServiceProvider;
 
 class TestCase extends Orchestra
 {

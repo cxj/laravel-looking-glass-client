@@ -2,13 +2,13 @@
 
 namespace Cxj\LookingGlass;
 
+use Cxj\LookingGlass\Commands\LookingGlassCommand;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Foundation\Console\AboutCommand;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Exceptions\InvalidPackage;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Cxj\LookingGlass\Commands\LookingGlassCommand;
 use Spatie\WebhookServer\WebhookCall;
 use Spatie\WebhookServer\WebhookServerServiceProvider;
 
@@ -44,15 +44,14 @@ class ServiceProvider extends PackageServiceProvider
         parent::register();  // 🙄
     }
 
-
     public function boot(): void
     {
         // Register commands.
         AboutCommand::add(
             'Looking Glass Client',
-            fn() => [
+            fn () => [
                 'Version' => self::VERSION,
-                'Repo'    => 'https://github.com/cxj/laravel-looking-glass-client'
+                'Repo'    => 'https://github.com/cxj/laravel-looking-glass-client',
             ]
         );
 
