@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/cxj/laravel-looking-glass-client.svg?style=flat-square)](https://packagist.org/packages/cxj/laravel-looking-glass-client)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/cxj/laravel-looking-glass-client/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/cxj/laravel-looking-glass-client/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/cxj/laravel-looking-glass-client/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/cxj/laravel-looking-glass-client/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![StyleCI](https://github.styleci.io/repos/609676447/shield?branch=main)](https://github.styleci.io/repos/609676447?branch=main)
 [![Total Downloads](https://img.shields.io/packagist/dt/cxj/laravel-looking-glass-client.svg?style=flat-square)](https://packagist.org/packages/cxj/laravel-looking-glass-client)
 
 This is an easy to use Laravel client for the [Looking Glass](https://github.com/cxj/looking-glass)
