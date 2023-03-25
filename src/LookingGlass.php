@@ -25,14 +25,13 @@ class LookingGlass
         $name = $appName ?? config('app.name');
 
         // Send this status to Looking Glass.
-        $this->dispatch = WebhookCall
-            ::create()
+        $this->dispatch = WebhookCall::create()
             ->throwExceptionOnFailure()
             ->url(config('looking-glass.url'))
             ->withHeaders(['App-Name' => $name])
             ->useSecret(config('looking-glass.secret'))
             ->payload(
-                ['name' => $name, 'result' => $result, 'label' => $testName,]
+                ['name' => $name, 'result' => $result, 'label' => $testName]
             )
             ->dispatch();
 
